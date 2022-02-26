@@ -5,25 +5,25 @@ public class DisplayMode {
     static boolean octal = false;
     static boolean decimal = false;
     static boolean hexadecimal = false;
+    static String displayMode = null;
 
     public static void switchDisplayMode(){
-        String displayMode = null;
         if (!binary && !octal && !decimal && !hexadecimal){
             displayMode = "binary";
             binary = true;
-        } else if (binary == true) {
+        } else if (binary) {
             displayMode = "octal";
             binary = false;
             octal = true;
-        } else if (octal == true) {
+        } else if (octal) {
             displayMode = "decimal";
             octal = false;
             decimal = true;
-        } else if (decimal == true) {
+        } else if (decimal) {
             displayMode = "hexadecimal";
             decimal = false;
             hexadecimal = true;
-        } else if (hexadecimal == true) {
+        } else if (hexadecimal) {
             displayMode = "binary";
             hexadecimal = false;
             binary = true;
