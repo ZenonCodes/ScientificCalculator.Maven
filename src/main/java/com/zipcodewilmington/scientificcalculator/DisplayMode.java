@@ -6,7 +6,7 @@ public class DisplayMode {
     static boolean decimal = false;
     static boolean hexadecimal = false;
 
-    public static String switchDisplayMode(){
+    public static void switchDisplayMode(){
         String displayMode = null;
         if (!binary && !octal && !decimal && !hexadecimal){
             displayMode = "binary";
@@ -28,7 +28,6 @@ public class DisplayMode {
             hexadecimal = false;
             binary = true;
         }
-        return displayMode;
     }
 
 
