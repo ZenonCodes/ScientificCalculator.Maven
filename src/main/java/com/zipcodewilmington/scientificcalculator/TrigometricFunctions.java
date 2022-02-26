@@ -15,17 +15,21 @@ public class TrigometricFunctions {
     }
 
     // Takes params opp and hyp and divides
-    // to get ratio and returns sin(x)
+    // to get ratio and returns inverse sin
     public static double invSin(double opp, double hyp) {
         double sinRatio = opp/hyp;
         return Math.asin(sinRatio);
     }
-    public static double invCos(double opp, double hyp) {
-        double cosRatio = opp/hyp;
+    // Takes params adj and hyp and divides
+    // to get ratio and returns inverse cos
+    public static double invCos(double adj, double hyp) {
+        double cosRatio = adj/hyp;
         return Math.acos(cosRatio);
     }
-    public static double invTan(double opp, double hyp) {
-        double tanRatio = opp/hyp;
+    // Takes params opp and adj and divides
+    // to get ratio and returns inverse tan
+    public static double invTan(double opp, double adj) {
+        double tanRatio = opp/adj;
         return Math.atan(tanRatio);
     }
 }
