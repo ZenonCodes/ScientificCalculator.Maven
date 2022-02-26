@@ -5,7 +5,11 @@ import java.util.Scanner;
 public class Trig {
 
     public static double sine(double angle) {
-        return Math.sin(angle);
+        if (TrigUnits.radians) {
+            return Math.sin(angle);
+        } else {
+            return Math.sin(Math.toRadians(angle));
+        }
     }
     // Takes radian x and returns cos(x)
     public static double cosine(double angle) {
