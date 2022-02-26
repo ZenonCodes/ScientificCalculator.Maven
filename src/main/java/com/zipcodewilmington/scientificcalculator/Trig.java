@@ -1,6 +1,6 @@
 package com.zipcodewilmington.scientificcalculator;
 
-public class TrigometricFunctions {
+public class Trig {
     // Takes radian x and returns sin(x)
     public static double calcSin(double angle) {
         return Math.sin(angle);
