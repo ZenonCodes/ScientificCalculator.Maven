@@ -1,12 +1,16 @@
 package com.zipcodewilmington.scientificcalculator;
 
-public class Log {
-    public static double Log (double number){
-        return Math.log(number);
+public class Logarithms {
+    public static double log (double number){
+        return Math.log10(number);
     }
-    public static double inverseLog(double x){
+    public static double invLog(double x){
         return Math.pow(10, x);
     }
-    Ln (natural logarithm)
-    ex (inverse natural logarithm)
+    public static double natLog (double x){
+        return Math.log(x);
+    }
+    public static double invNatLog(double x) {
+        return Math.pow(Math.E, x);
+    }
 }
