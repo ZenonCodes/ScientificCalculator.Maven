@@ -10,12 +10,12 @@ class MainApplicationTest {
 
 
         public void testAddition () {
-        int addTestA = 10;
-        int addTestB = 20;
-        int expectedAddition = 30;
+            int addTestA = 10;
+            int addTestB = 20;
+            int expectedAddition = 30;
 
-        int additionResult = newCalculatorTest.add(addTestA, addTestB);
-        Assert.AssertEquals(expectedAddition, additionResult);
+            int additionResult = newCalculatorTest.add(addTestA, addTestB);
+            Assert.AssertEquals(expectedAddition, additionResult);
         }
         public void testSubtraction () {
             int subtractionTestA = 30;
@@ -32,6 +32,30 @@ class MainApplicationTest {
 
             int multiplyResult = newCalculatorTest.multiply(multiplyTestA, multiplyTestB);
             Assert.AssertEquals(expectedMultiply, multiplyResult);
+        }
+        public void testDivision () {
+            int divisionTestA = 20;
+            int divisionTestB = 10;
+            int expectedDivision = 2;
+
+            int divisionResult = newCalculatorTest.division(divisionTestA, divisionTestB);
+            Assert.AssertEquals(expectedDivision, divisionResult);
+        }
+        public void testSquare () {
+            int squaredNumberA = 4;
+            int squaredPowerB = 2;
+            int expectedSquareResult = 16;
+
+            int squaredResult = newCalculatorTest.square(squaredNumberA, squaredPowerB);
+            Assert.AssertEquals(expectedSquareResult, squaredResult);
+        }
+        public void testSquareRoot () {
+            int squareRootTestA = 4;
+            int squareRootTestB = 2;
+            int expectedSquareRoot = 2;
+
+            int squareRootResult = newCalculatorTest.squareRoot(squareRootTestA, squareRootTestB);
+            Assert.AssertEquals(expectedSquareRoot, squareRootResult);
         }
     }
 }
