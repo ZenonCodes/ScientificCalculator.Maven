@@ -13,12 +13,18 @@ public class Trig {
     }
     // Takes radian x and returns cos(x)
     public static double cosine(double angle) {
-        return Math.cos(angle);
-    }
+        if (TrigUnits.radians) {
+            return Math.cos(angle);
+        } else {
+            return Math.cos(Math.toRadians(angle));
+        }    }
     // Takes radian x and returns tan(x)
     public static double tangent(double angle) {
-        return Math.tan(angle);
-    }
+        if (TrigUnits.radians) {
+            return Math.tan(angle);
+        } else {
+            return Math.tan(Math.toRadians(angle));
+        }    }
 
     // Takes params opp and hyp and divides
     // to get ratio and returns inverse sin
