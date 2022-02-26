@@ -3,6 +3,7 @@ package com.zipcodewilmington.scientificcalculator;
 import java.util.Scanner;
 
 public class Trig {
+
     public static double sine(double angle) {
         return Math.sin(angle);
     }

@@ -5,7 +5,7 @@ public class DisplayMode {
     static boolean octal = false;
     static boolean decimal = false;
     static boolean hexadecimal = false;
-    static String displayMode = null;
+    static String displayMode = "decimal";
 
     public static void switchDisplayMode(){
         if (!binary && !octal && !decimal && !hexadecimal){
@@ -28,10 +28,21 @@ public class DisplayMode {
             hexadecimal = false;
             binary = true;
         }
+
     }
 
 
     public static void switchDisplayMode(String mode){
+        displayMode = mode.toLowerCase();
+        if(displayMode.equals("binary")){
+            binary = true;
+        } else if (displayMode.equals("octal")){
+            octal = true;
+        } else if (displayMode.equals("decimal")){
+            decimal = true;
+        } else if (displayMode.equals("hexadecimal")){
+            hexadecimal = true;
+        }
 
     }
 }
