@@ -1,14 +1,16 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import org.testng.annotations.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.Before; //not sure about this
+
 class MainApplicationTest {
 
     @org.junit.jupiter.api.Test
     void main() {
         newCalculatorTest = new ScientificCalculator();
 
-
+        @Test
         public void testAddition () {
             int addTestA = 10;
             int addTestB = 20;
@@ -17,6 +19,7 @@ class MainApplicationTest {
             int additionResult = newCalculatorTest.add(addTestA, addTestB);
             Assert.AssertEquals(expectedAddition, additionResult);
         }
+        @Test
         public void testSubtraction () {
             int subtractionTestA = 30;
             int subtractionTestB = 20;
@@ -25,6 +28,7 @@ class MainApplicationTest {
             int subtractionResult = newCalculatorTest.subtract(subtractionTestA, subtractionTestB);
             Assert.AssertEquals(expectedSubtraction, subtractionResult);
         }
+        @Test
         public void testMultiply () {
             int multiplyTestA = 10;
             int multiplyTestB = 20;
@@ -33,6 +37,7 @@ class MainApplicationTest {
             int multiplyResult = newCalculatorTest.multiply(multiplyTestA, multiplyTestB);
             Assert.AssertEquals(expectedMultiply, multiplyResult);
         }
+        @Test
         public void testDivision () {
             int divisionTestA = 20;
             int divisionTestB = 10;
@@ -41,6 +46,7 @@ class MainApplicationTest {
             int divisionResult = newCalculatorTest.division(divisionTestA, divisionTestB);
             Assert.AssertEquals(expectedDivision, divisionResult);
         }
+        @Test
         public void testSquare () {
             int squaredNumberA = 4;
             int squaredPowerB = 2;
@@ -49,6 +55,7 @@ class MainApplicationTest {
             int squaredResult = newCalculatorTest.square(squaredNumberA, squaredPowerB);
             Assert.AssertEquals(expectedSquareExpected, squaredResult);
         }
+        @Test
         public void testSquareRoot () {
             int squareRootTestA = 4;
             int squareRootTestB = 2;
@@ -57,6 +64,7 @@ class MainApplicationTest {
             int squareRootResult = newCalculatorTest.squareRoot(squareRootTestA, squareRootTestB);
             Assert.AssertEquals(expectedSquareRoot, squareRootResult);
         }
+        @Test
         public void testXtotheY () {
             int xForTheY = 4;
             int yForTheX = 2;
@@ -65,12 +73,37 @@ class MainApplicationTest {
             int variableProductResult = newCalculatorTest.variableExponent(xForTheY, yForTheX);
             Assert.AssertEquals(expectedVariableProductResult, variableProductResult);
         }
-        public void inverseX () {
+        @Test
+        public void testInverseX () {
             int inverseXValue = 5;
-            int expectedInverseResult = 1/5;
+            double expectedInverseResult = 1/5;
 
-            int inverseResult = newCalculatorTest.inverseVaule(inverseXValue);
+            int inverseResult = newCalculatorTest.inverseValue(inverseXValue);
             Assert.AssertEquals(expectedInverseResult, inverseResult);
+        }
+        @Test
+        public void testSineX () {
+            double sineValueRadians = 0.19 * Math.PI;
+            double expectedSineX = 83/144;
+
+            double sineResult = newCalculatorTest.sine(sineValueRadians);
+            Assert.AssertEquals(expectedSineX, sineResult);
+        }
+        @Test
+        public void testCosineX () {
+            double cosineValueRadians = 0.19 * Math.PI;
+            double expectedCosineX = Math.sqrt(3) / 2;
+
+            double cosineResult = newCalculatorTest.cosine(cosineValueRadians);
+            Assert.AssertEquals(expectedCosineX, cosineResult);
+        }
+        @Test
+        public void testTangentX () {
+            double tangentValueRadians = Math.PI / 6;
+            double expectedTangentX = Math.sqrt(3) / 3;
+
+            double tangentResult = newCalculatorTest.tangent(tangentValueRadians);
+            Assert.AssertEquals(expectedTangentX, tangentResult);
         }
     }
 }
