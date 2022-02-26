@@ -22,10 +22,10 @@ public class TrigometricFunctions {
     }
     public static double invCos(double opp, double hyp) {
         double cosRatio = opp/hyp;
-        return Math.asin(cosRatio);
+        return Math.acos(cosRatio);
     }
-    public static double invSin(double opp, double hyp) {
+    public static double invTan(double opp, double hyp) {
         double tanRatio = opp/hyp;
-        return Math.asin(tanRatio);
+        return Math.atan(tanRatio);
     }
 }
