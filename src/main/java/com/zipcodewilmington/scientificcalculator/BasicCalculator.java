@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class BasicCalculator {
     double num1 = 0.0;
     double num2 = 0.0;
-    static int op;
+    static char op;
     static double result = 0.0; //current  state displayed on calculator, call this variable before every test
     static Scanner scan;
 
@@ -21,26 +21,26 @@ public class BasicCalculator {
 */
 
     /**
-     * @param op   : used for operations 1:Addition, 2:Substraction, 3:Multiplication, 4:Divide
+     * @param op   : used for operations like +,-,* and /
      * @param num1 : input number1
      * @param num2 : input number 2
-     * @return : Returns the result of all 4 operation depending on the 'op' is passed
+     * @return : Returns the result of all 4 operations depending on the 'op' is passed
      */
-    public double basicOperations ( int op, double num1, double num2 ) {
+    public double basicOperations ( char op, double num1, double num2 ) {
 //Similarly this to prompt user input
-//        Scanner scan=new Scanner(System.in);
-//        System.out.println("Please enter number1");
+//       Scanner scan=new Scanner(System.in);
+//      System.out.println("Please enter number1");
 //         num1= scan.nextDouble();
 //      System.out.println("Please enter number2");
-//        num2=scan.nextDouble();
-        if (op == 1) {
+//       num2=scan.nextDouble();
+        if (op == '+') {
             result = num1 + num2;
-        } else if (op == 2) {
+        } else if (op == '-') {
             result = num1 - num2;
-        } else if (op == 3) {
+        } else if (op == '*') {
             double mul = num1 * num2;
             result = Double.parseDouble(String.format("%.2f", mul));
-        } else if (op == 4) {
+        } else if (op == '/') {
              if(num2!=0) {
                  double div = num1 / num2;
                  result = Double.parseDouble(String.format("%.2f", div));
