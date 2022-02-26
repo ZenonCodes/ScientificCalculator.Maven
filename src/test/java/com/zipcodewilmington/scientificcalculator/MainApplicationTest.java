@@ -44,10 +44,10 @@ class MainApplicationTest {
         public void testSquare () {
             int squaredNumberA = 4;
             int squaredPowerB = 2;
-            int expectedSquareResult = 16;
+            int expectedSquareExpected = 16;
 
             int squaredResult = newCalculatorTest.square(squaredNumberA, squaredPowerB);
-            Assert.AssertEquals(expectedSquareResult, squaredResult);
+            Assert.AssertEquals(expectedSquareExpected, squaredResult);
         }
         public void testSquareRoot () {
             int squareRootTestA = 4;
@@ -56,6 +56,21 @@ class MainApplicationTest {
 
             int squareRootResult = newCalculatorTest.squareRoot(squareRootTestA, squareRootTestB);
             Assert.AssertEquals(expectedSquareRoot, squareRootResult);
+        }
+        public void testXtotheY () {
+            int xForTheY = 4;
+            int yForTheX = 2;
+            int expectedVariableProductResult = 16;
+
+            int variableProductResult = newCalculatorTest.variableExponent(xForTheY, yForTheX);
+            Assert.AssertEquals(expectedVariableProductResult, variableProductResult);
+        }
+        public void inverseX () {
+            int inverseXValue = 5;
+            int expectedInverseResult = 1/5;
+
+            int inverseResult = newCalculatorTest.inverseVaule(inverseXValue);
+            Assert.AssertEquals(expectedInverseResult, inverseResult);
         }
     }
 }
