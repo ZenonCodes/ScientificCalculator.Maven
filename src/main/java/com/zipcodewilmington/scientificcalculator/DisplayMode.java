@@ -23,6 +23,10 @@ public class DisplayMode {
             displayMode = "hexadecimal";
             decimal = false;
             hexadecimal = true;
+        } else if (hexadecimal == true) {
+            displayMode = "binary";
+            hexadecimal = false;
+            binary = true;
         }
         return displayMode;
     }
