@@ -69,6 +69,7 @@ public class DisplayMode {
      * Method for changing result display mode. Convert double to long and then convert long
      * to corresponding display.
      * References: https://stackoverflow.com/questions/22644079/how-to-convert-a-double-number-to-binary-number-in-java
+     *             Tested with: https://www.binaryconvert.com/convert_double.html?decimal=053
      */
     public static void changeDisplay() {
         long toBits = Double.doubleToRawLongBits(BasicCalculator.result);
