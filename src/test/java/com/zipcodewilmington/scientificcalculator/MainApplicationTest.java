@@ -52,7 +52,7 @@ class MainApplicationTest {
             int squaredPowerB = 2;
             int expectedSquareExpected = 16;
 
-            int squaredResult = newCalculatorTest.square(squaredNumberA, squaredPowerB);
+            int squaredResult = newCalculatorTest.getSquare(squaredNumberA, squaredPowerB);
             Assert.AssertEquals(expectedSquareExpected, squaredResult);
         }
         @Test
@@ -61,7 +61,7 @@ class MainApplicationTest {
             int squareRootTestB = 2;
             int expectedSquareRoot = 2;
 
-            int squareRootResult = newCalculatorTest.squareRoot(squareRootTestA, squareRootTestB);
+            int squareRootResult = newCalculatorTest.getSquareRoot(squareRootTestA, squareRootTestB);
             Assert.AssertEquals(expectedSquareRoot, squareRootResult);
         }
         @Test
@@ -70,7 +70,7 @@ class MainApplicationTest {
             int yForTheX = 2;
             int expectedVariableProductResult = 16;
 
-            int variableProductResult = newCalculatorTest.variableExponent(xForTheY, yForTheX);
+            int variableProductResult = newCalculatorTest.getExponentiation(xForTheY, yForTheX);
             Assert.AssertEquals(expectedVariableProductResult, variableProductResult);
         }
         @Test
@@ -78,7 +78,7 @@ class MainApplicationTest {
             int inverseXValue = 5;
             double expectedInverseResult = 1/5;
 
-            int inverseResult = newCalculatorTest.inverseValue(inverseXValue);
+            int inverseResult = newCalculatorTest.getInverseOfNumber(inverseXValue);
             Assert.AssertEquals(expectedInverseResult, inverseResult);
         }
         @Test
@@ -96,6 +96,14 @@ class MainApplicationTest {
 
             double cosineResult = newCalculatorTest.cosine(cosineValueRadians);
             Assert.AssertEquals(expectedCosineX, cosineResult);
+        }
+        @Test
+        public void testTangentX () {
+            double tangentValueRadians = Math.PI / 6;
+            double expectedTangentX = Math.sqrt(3) / 3;
+
+            double tangentResult = newCalculatorTest.tangent(tangentValueRadians);
+            Assert.AssertEquals(expectedTangentX, tangentResult);
         }
         @Test
         public void testTangentX () {
