@@ -3,7 +3,6 @@ package com.zipcodewilmington.scientificcalculator;
 public class Memory {
     static double memoryVal = 0;
 
-
      /** Add the currently displayed value to the value stored in memory and update the display.
      */
      public static void MAddKey() {
