@@ -9,6 +9,17 @@ class MainApplicationTest {
         Trigonometry test2 = new Trigonometry();
         Logarithms test3 = new Logarithms();
         Factorial test4 = new Factorial();
+        Console test5 = new Console();
+        Display test6 = new Display();
+//Get state test
+//        @Test
+//        void getStateORShowDisplay() {
+//            double expectedDisplayResult = 0.0;
+//            double getStateOrShowDisplayTest = test6.getStateORShowDisplay;
+//            Assertions.assertEquals(expectedDisplayResult,getStateOrShowDisplayTest);
+//
+//        }
+
 
 //        @Test
 //        void factorialNegativeNumber () {
@@ -164,6 +175,24 @@ class MainApplicationTest {
         double expectedFactorialTest = 120;
         double factorialResult = test4.factorial(5);
         Assertions.assertEquals(expectedFactorialTest,factorialResult);
+    }
+    @Test
+    void getStringInputTest () {
+        String expectedStringInputTest = "Test";
+        String printResult = test5.getStringInput("test");
+        Assertions.assertEquals(expectedStringInputTest,printResult);
+    }
+    @Test
+    void getIntegerInput () {
+        Integer expectedIntegerInput = null;
+        Integer getIntegerResult = test5.getIntegerInput("Test");
+        Assertions.assertEquals(expectedIntegerInput,getIntegerResult);
+    }
+    @Test
+    void getDoubleInput () {
+        Double expectedIntegerInput = null;
+        Double getDoubleResult = test5.getDoubleInput("Test");
+        Assertions.assertEquals(expectedIntegerInput,getDoubleResult);
     }
 //        @Test
 //        public void testSubtraction () {
