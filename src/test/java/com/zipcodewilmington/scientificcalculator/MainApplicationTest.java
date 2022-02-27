@@ -9,12 +9,7 @@ class MainApplicationTest {
         Trigonometry test2 = new Trigonometry();
         Logarithms test3 = new Logarithms();
         Factorial test4 = new Factorial();
-        @Test
-        void factorialTestAboveOne () {
-            double expectedFactorialTest = 120;
-            double factorialResult = test4.factorial(5);
-            Assertions.assertEquals(expectedFactorialTest,factorialResult);
-        }
+
 //        @Test
 //        void factorialNegativeNumber () {
 //            String expectedFactorialNegativeNumber = "Factorial must be either zero or a positive integer.";
@@ -50,9 +45,10 @@ class MainApplicationTest {
         }
         @Test
         void divideByZeroTest () {
-            String expectedDivideByZero = "Infinity";
+            String expectedDivideByZeroString = "Infinity";
+            double expectedDivideByZeroDouble = Double.parseDouble(expectedDivideByZeroString);
             double divideByZeroResult = test.basicOperations("/",20,0);
-            Assertions.assertEquals(expectedDivideByZero,divideByZeroResult);
+            Assertions.assertEquals(expectedDivideByZeroDouble,divideByZeroResult);
         }
         @Test
         void inverseTest () {
@@ -163,7 +159,12 @@ class MainApplicationTest {
         double factorialOneResult = test4.factorial(1);
         Assertions.assertEquals(expectedFactorialOne, factorialOneResult);
     }
-
+    @Test
+    void factorialTestAboveOne () {
+        double expectedFactorialTest = 120;
+        double factorialResult = test4.factorial(5);
+        Assertions.assertEquals(expectedFactorialTest,factorialResult);
+    }
 //        @Test
 //        public void testSubtraction () {
 //            int subtractionTestA = 30;
