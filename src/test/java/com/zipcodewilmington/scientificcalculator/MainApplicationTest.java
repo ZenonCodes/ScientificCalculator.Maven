@@ -150,13 +150,13 @@ class MainApplicationTest {
         Assertions.assertEquals(expectedInverseTest, invLogResult);
     }
     @Test
-    void natLog () {
+    void natLogTest () {
         double expectedNatLog = 1.0986122886681098;
         double natLogResult = test3.natLog(3);
         Assertions.assertEquals(expectedNatLog,natLogResult);
     }
     @Test
-    void invNatLog () {
+    void invNatLogTest () {
         double expectedInvLog = 3;
         double invNatLogResult = test3.invNatLog(1.0986122886681098);
         Assertions.assertEquals(expectedInvLog,invNatLogResult);
@@ -185,13 +185,13 @@ class MainApplicationTest {
 
 
     @Test
-    void getIntegerInput () {
+    void getIntegerInputTest () {
         Integer expectedIntegerInput = null;
         Integer getIntegerResult = test5.getIntegerInput("Test");
         Assertions.assertEquals(expectedIntegerInput,getIntegerResult);
     }
     @Test
-    void getDoubleInput () {
+    void getDoubleInputTest () {
         Double expectedIntegerInput = null;
         Double getDoubleResult = test5.getDoubleInput("Test");
         Assertions.assertEquals(expectedIntegerInput,getDoubleResult);
