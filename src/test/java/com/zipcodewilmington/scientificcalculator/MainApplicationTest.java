@@ -1,7 +1,10 @@
 package com.zipcodewilmington.scientificcalculator;
 
+
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 class MainApplicationTest {
 
 //    void main() { //main method not needed for test class
@@ -127,6 +130,7 @@ class MainApplicationTest {
         double inverseCosineResult = test2.invCosine(3,5);
         Assertions.assertEquals(expectedInverseCosineRatio,inverseCosineResult);
     }
+
     @Test
     void inverseTangentResult () {
         double expectedInverseTangentRatio = 0.6435011087932844;
@@ -196,3 +200,8 @@ class MainApplicationTest {
     }
     }
 
+
+<<<<<<< HEAD
+ 
+=======
+>>>>>>> 0d290c65f349837d9673eddd822cd828bf6e5b52
