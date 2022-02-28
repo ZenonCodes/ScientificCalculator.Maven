@@ -40,4 +40,13 @@ public class BasicCalculatorTest {
              System.out.println("Actual value:"+actual);
              Assertions.assertEquals(expected,actual);
          }
+         @Test
+    public void divideByZeroTest(){
+            String  exp="Infinity";
+             double expected=Double.parseDouble(exp);
+             double actual=test.basicOperations("/",10,0);
+             System.out.println(actual);
+             Assertions.assertEquals(expected, actual);
+
+         }
 }

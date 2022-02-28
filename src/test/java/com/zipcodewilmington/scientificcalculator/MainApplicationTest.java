@@ -1,7 +1,8 @@
 package com.zipcodewilmington.scientificcalculator;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.Before; //not sure about this
+import org.junit.jupiter.api.Test;
+/*
 class MainApplicationTest {
 
     @org.junit.jupiter.api.Test
@@ -74,3 +75,6 @@ class MainApplicationTest {
         }
     }
 }
+
+
+ */
