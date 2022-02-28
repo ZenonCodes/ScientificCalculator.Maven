@@ -11,9 +11,10 @@ public class DisplayMode {
      * Cycles through display modes and updates the corresponding fields.
      */
     public static void switchDisplayMode(){
-        if (!binary && !octal && !decimal && !hexadecimal){
+        if (!binary && !octal && decimal && !hexadecimal){
             displayMode = "binary";
             binary = true;
+            decimal=false;
         } else if (binary) {
             displayMode = "octal";
             binary = false;

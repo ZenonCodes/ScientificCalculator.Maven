@@ -180,12 +180,10 @@ class MainApplicationTest {
         double factorialResult = test4.factorial(5);
         Assertions.assertEquals(expectedFactorialTest,factorialResult);
     }
-    @Test
-    void getStringInputTest () {
-        String expectedStringInputTest = "Test";
-        String printResult = test5.getStringInput("test");
-        Assertions.assertEquals(expectedStringInputTest,printResult);
-    }
+
+
+
+
     @Test
     void getIntegerInput () {
         Integer expectedIntegerInput = null;
@@ -198,10 +196,9 @@ class MainApplicationTest {
         Double getDoubleResult = test5.getDoubleInput("Test");
         Assertions.assertEquals(expectedIntegerInput,getDoubleResult);
     }
+
+
     }
 
 
-<<<<<<< HEAD
- 
-=======
->>>>>>> 0d290c65f349837d9673eddd822cd828bf6e5b52
+
